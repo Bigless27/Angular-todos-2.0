@@ -1,10 +1,33 @@
-<html>
+<html ng-app = "nameApp">
 <head>
   <title>Angular todos 2.0</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+  <script src="app.js"></script>
 </head>
-<body>
+<body ng-controller = "MainController">
 
+  <div>
+  Task name: <input  type = "text" >
+  Task country: <input type = "text">
+  </div>
+
+  <table>
+    <tr>
+      <th>Task </th>
+      <th>Country</th>
+    </tr>
+    <tr ng-repeat = "task in tasks">
+      <td> {{task.name}} </td>
+      <td>{{task.country}}</td>
+      <td><img ng-src = "{{task.flagUrl}}" width = 100></td>
+      <td><a href="" ng-click = "removeTask(task)">Remove</a></td>
+    </tr>
+  </table>
+
+
+  <form ng-submit = "addTask()">
+    <input type = "text" ng-model = "enteredTask">
+    <input type = "submit" value = "add">
+  </form>
 </body>
 </html>
