@@ -2,6 +2,7 @@
 <head>
   <title>Angular todos 2.0</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
   <script src="app.js"></script>
 </head>
 <body ng-controller = "MainController">
@@ -16,7 +17,8 @@
       <th>Country</th>
     </tr>
     <tr ng-repeat = "task in tasks | filter: query | orderBy: 'country'">
-      <td> {{task.name}} </td>
+      <td> <input type="checkbox"> </td>
+      <td> <a href="">{{task.name}}</a></td>
       <td>{{task.country}}</td>
       <td><img ng-src = "{{task.flagUrl}}" width = 100></td>
       <td><a href="" ng-click = "removeTask(task)">Remove</a></td>
@@ -24,9 +26,5 @@
   </table>
 
 
-  <form ng-submit = "addTask()">
-    <input type = "text" ng-model = "enteredTask">
-    <input type = "submit" value = "add">
-  </form>
 </body>
 </html>
