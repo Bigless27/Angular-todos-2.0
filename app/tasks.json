@@ -13,5 +13,10 @@
     "name": "Eat some food ",
     "country": "Mexico",
     "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
+  },
+  {
+    "name": "Walk the dog",
+    "country": "Canada",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg"
   }
 ]
