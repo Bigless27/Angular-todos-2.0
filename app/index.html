@@ -7,8 +7,7 @@
 <body ng-controller = "MainController">
 
   <div>
-  Task name: <input  type = "text" >
-  Task country: <input type = "text">
+  Search : <input  ng-model = "query" type = "text" >
   </div>
 
   <table>
@@ -16,7 +15,7 @@
       <th>Task </th>
       <th>Country</th>
     </tr>
-    <tr ng-repeat = "task in tasks">
+    <tr ng-repeat = "task in tasks | filter: query | orderBy: 'country'">
       <td> {{task.name}} </td>
       <td>{{task.country}}</td>
       <td><img ng-src = "{{task.flagUrl}}" width = 100></td>
