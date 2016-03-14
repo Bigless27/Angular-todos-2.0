@@ -2,7 +2,14 @@ var nameApp = angular.module('nameApp',['ngRoute']);
 
 nameApp.config(function($routeProvider){
   $routeProvider.
-    when('/',{
-      template:
+    .when('/',{
+      controller: "MainController",
+      templateUrl: 'index.html'
     })
-    when(':taskName')})
+    .when('/:task',
+    {
+      controller: 'MainController',
+      templateUrl: "views/View1.html"
+    })
+    .otherwise({redirectTo: '/'});
+})
