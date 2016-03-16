@@ -6,7 +6,7 @@ nameApp.config(function($routeProvider){
       controller: "MainController",
       templateUrl: 'index.html'
     })
-    .when('/:task',
+    .when('/:taskName',
     {
       controller: 'MainController',
       templateUrl: "views/View1.html"
