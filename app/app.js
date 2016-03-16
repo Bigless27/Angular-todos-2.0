@@ -6,6 +6,7 @@ nameApp.controller("MainController",[
     http.get('tasks.json').success(function(data){
       $scope.tasks = data;
     });
+    $scope.sortField = 'country'
 
 
     $scope.addTask = function(){
