@@ -13,12 +13,12 @@
 
   <table>
     <tr>
-      <th> Completed </th>
+      <th><input type = "checkbox" ng-model = "master">Check All</th>
       <th><a href = "" ng-click = "sortField = 'name'; reverse = !reverse"> Task </a></th>
       <th> <a href = "" ng-click = "sortField = 'country'; reverse = !reverse">Country</a></th>
     </tr>
     <tr ng-repeat = "task in tasks | filter: query | orderBy: sortField:reverse">
-      <td> <input type="checkbox"> </td>
+      <td> <input type="checkbox" ng-checked = "master"> </td>
       <td> <a href="/task.view">{{task.name}}</a></td>
       <td>{{task.country}}</a></td>
       <td><img ng-src = "{{task.flagUrl}}" width = 100></td>

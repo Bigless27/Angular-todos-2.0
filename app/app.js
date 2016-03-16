@@ -3,11 +3,10 @@ var nameApp = angular.module('nameApp',[]);
 nameApp.controller("MainController",[
   '$scope', '$http', function($scope, http){
 
-    $scope.sortField = 'country'
-
     http.get('tasks.json').success(function(data){
       $scope.tasks = data;
     });
+    $scope.sortField = 'country'
 
 
     $scope.addTask = function(){
