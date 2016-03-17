@@ -1,6 +1,7 @@
 <html ng-app = "nameApp">
 <head>
   <title>Angular todos 2.0</title>
+  <link rel="stylesheet" type="text/css" href="app.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
   <script src = "route.js"></script>
@@ -14,7 +15,11 @@
 
   <table>
     <tr>
-      <th><input type = "checkbox" ng-model = "master">Check All</th>
+      <th id = "checked"><span>
+          Select All
+          <input type = "checkbox" ng-model = "master">
+        </span>
+      </th>
       <th><a href = "" ng-click = "sortField = 'name'; reverse = !reverse"> Task </a></th>
       <th> <a href = "" ng-click = "sortField = 'country'; reverse = !reverse">Country</a></th>
     </tr>

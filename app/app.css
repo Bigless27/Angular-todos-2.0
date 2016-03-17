@@ -1,0 +1,20 @@
+#checked span input{
+
+}
+
+#checked span{
+  border-radius: 4px;
+  border: 1px solid #D0D0D0;
+  font-size: 12px;
+  padding: 2px;
+  text-align: center;
+  overflow: auto;
+  background-color: #ccc;
+}
+
+
+
+#checked span input[type = "checkbox"]:checked + #checked span input{
+  background-color: red;
+  color: red;
+}
