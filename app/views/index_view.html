@@ -14,7 +14,7 @@
     </tr>
     <tr ng-repeat = "task in tasks | filter: query | orderBy: sortField:reverse">
       <td> <input type="checkbox" ng-checked = "master"> </td>
-      <td> <a href="/{{task.name}}">{{task.name}}</a></td>
+      <td> <a href="#/name/{{task.name}}">{{task.name}}</a></td>
       <td>{{task.country}}</a></td>
       <td><img ng-src = "{{task.flagUrl}}" width = 100></td>
       <td><a href="" ng-click = "removeTask(task)">Remove</a></td>
