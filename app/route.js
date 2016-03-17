@@ -3,13 +3,17 @@ var nameApp = angular.module('nameApp',['ngRoute']);
 nameApp.config(function($routeProvider){
   $routeProvider
     .when('/',{
-      controller: "MainController",
+      controller: "IndexController",
       templateUrl: 'index.html'
     })
     .when('/:taskName',
     {
-      controller: 'SimpleController',
+      controller: '<h1> Hello </h1>',
       templateUrl: "views/View1.html"
     })
     .otherwise({redirectTo: '/'});
+})
+
+nameApp.controller('IndexController', function($scope, $http){
+  console.log("hello")
 })
