@@ -1,4 +1,4 @@
-var nameApp = angular.module('nameApp',[]);
+var nameApp = angular.module('nameApp',['ngRoute']);
 
 nameApp.controller("MainController",[
   '$scope', '$http', function($scope, http){

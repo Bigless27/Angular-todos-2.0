@@ -1,14 +1,13 @@
-var nameApp = angular.module('nameApp',['ngRoute']);
 //fix routing and include file
 nameApp.config(function($routeProvider){
   $routeProvider
     .when('/',{
-      controller: "IndexController",
-      templateUrl: 'index.html'
+      controller: "MainController",
+      templateUrl: 'views/index_view.html'
     })
-    .when('/:taskName',
+    .when('/Get%20some%20sleep',
     {
-      controller: '<h1> Hello </h1>',
+      controller: 'IndexController',
       templateUrl: "views/View1.html"
     })
     .otherwise({redirectTo: '/'});
