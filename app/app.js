@@ -18,3 +18,9 @@ nameApp.controller("MainController",[
       $scope.tasks.splice(i, 1)
     }
 }])
+
+nameApp.controller("TaskNameController",["$scope",'$routeParams',function($scope, $routeParams){
+  // console.log($routeParams)
+  $scope.task = $routeParams
+}])
+

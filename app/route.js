@@ -5,14 +5,11 @@ nameApp.config(function($routeProvider){
       controller: "MainController",
       templateUrl: 'views/index_view.html'
     })
-    .when('/Get%20some%20sleep',
+    .when('/name/:taskName',
     {
-      controller: 'IndexController',
+      controller: 'TaskNameController',
       templateUrl: "views/View1.html"
     })
     .otherwise({redirectTo: '/'});
 })
 
-nameApp.controller('IndexController', function($scope, $http){
-  console.log("hello")
-})
