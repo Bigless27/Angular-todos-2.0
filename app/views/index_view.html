@@ -1,0 +1,22 @@
+  <div>
+  Search : <input  ng-model = "query" type = "text" >
+  </div>
+
+  <table>
+    <tr>
+      <th id = "checked"><span>
+          Select All
+          <input type = "checkbox" ng-model = "master">
+        </span>
+      </th>
+      <th><a href = "" ng-click = "sortField = 'name'; reverse = !reverse"> Task </a></th>
+      <th> <a href = "" ng-click = "sortField = 'country'; reverse = !reverse">Country</a></th>
+    </tr>
+    <tr ng-repeat = "task in tasks | filter: query | orderBy: sortField:reverse">
+      <td> <input type="checkbox" ng-checked = "master"> </td>
+      <td> <a href="#/name/{{task.name}}">{{task.name}}</a></td>
+      <td>{{task.country}}</a></td>
+      <td><img ng-src = "{{task.flagUrl}}" width = 100></td>
+      <td><a href="" ng-click = "removeTask(task)">Remove</a></td>
+    </tr>
+  </table>

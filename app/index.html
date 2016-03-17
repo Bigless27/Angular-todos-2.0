@@ -4,32 +4,10 @@
   <link rel="stylesheet" type="text/css" href="app.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
-  <script src = "route.js"></script>
   <script src="app.js"></script>
+  <script src = "route.js"></script>
 </head>
-<body ng-controller = "MainController">
-
-  <div>
-  Search : <input  ng-model = "query" type = "text" >
-  </div>
-
-  <table>
-    <tr>
-      <th id = "checked"><span>
-          Select All
-          <input type = "checkbox" ng-model = "master">
-        </span>
-      </th>
-      <th><a href = "" ng-click = "sortField = 'name'; reverse = !reverse"> Task </a></th>
-      <th> <a href = "" ng-click = "sortField = 'country'; reverse = !reverse">Country</a></th>
-    </tr>
-    <tr ng-repeat = "task in tasks | filter: query | orderBy: sortField:reverse">
-      <td> <input type="checkbox" ng-checked = "master"> </td>
-      <td> <a href="/task.country">{{task.name}}</a></td>
-      <td>{{task.country}}</a></td>
-      <td><img ng-src = "{{task.flagUrl}}" width = 100></td>
-      <td><a href="" ng-click = "removeTask(task)">Remove</a></td>
-    </tr>
-  </table>
-</body>
+  <body ng-controller = "MainController">
+    <div ng-view></div>
+  </body>
 </html>
