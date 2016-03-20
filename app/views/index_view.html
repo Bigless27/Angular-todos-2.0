@@ -11,12 +11,15 @@
       </th>
       <th><a href = "" ng-click = "sortField = 'name'; reverse = !reverse"> Task </a></th>
       <th> <a href = "" ng-click = "sortField = 'country'; reverse = !reverse">Country</a></th>
+      <th>Flag</th>
+      <th> <a href = "" ng-click = "sortFiled = 'capital'; reverse = !reverse">Capital</a></th>
     </tr>
     <tr ng-repeat = "task in tasks | filter: query | orderBy: sortField:reverse">
       <td> <input type="checkbox" ng-checked = "master"> </td>
       <td> <a href="#/name/{{task.name}}">{{task.name}}</a></td>
       <td>{{task.country}}</a></td>
       <td><img ng-src = "{{task.flagUrl}}" width = 100></td>
+      <td>{{task.capital | capitalize}}</td>
       <td><a href="" ng-click = "removeTask(task)">Remove</a></td>
     </tr>
   </table>
